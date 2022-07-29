@@ -158,19 +158,7 @@ const SignInScreen = (props: SignInProps) => {
         <Text style={styles.otherssignin}>HOẶC ĐĂNG NHẬP BẰNG</Text>
         <View style={{ alignSelf: "center" }}>
           <View style={styles.socialsignin}>
-            <TouchableWithoutFeedback
-              onPress={() =>
-                Toast.show({ text: "Tính năng còn đang phát triển" })
-              }
-            >
-              <View style={styles.socialsigninitem}>
-                <Image
-                  source={require("@/assets/icons/zalo.png")}
-                  style={styles.socialsigninbox}
-                />
-                <Text style={styles.socialsignintext}>Zalo</Text>
-              </View>
-            </TouchableWithoutFeedback>
+         
             <TouchableWithoutFeedback
               onPress={() =>
                 Toast.show({ text: "Tính năng còn đang phát triển" })
@@ -184,7 +172,7 @@ const SignInScreen = (props: SignInProps) => {
                     style={styles.socialsigninicon}
                   />
                 </View>
-                <Text style={styles.socialsignintext}>Facebook</Text>
+                {/* <Text style={styles.socialsignintext}>Facebook</Text> */}
               </View>
             </TouchableWithoutFeedback>
             <TouchableWithoutFeedback
@@ -205,7 +193,7 @@ const SignInScreen = (props: SignInProps) => {
                     style={styles.socialsigninicon}
                   />
                 </View>
-                <Text style={styles.socialsignintext}>Google</Text>
+                {/* <Text style={styles.socialsignintext}>Google</Text> */}
               </View>
             </TouchableWithoutFeedback>
           </View>
@@ -334,11 +322,13 @@ const styles = StyleSheet.create({
   },
   socialsignin: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "center",
+
     marginTop: 18,
   },
   socialsigninitem: {
     alignItems: "center",
+    paddingHorizontal:5,
   },
   socialsigninbox: {
     width: 34,

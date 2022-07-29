@@ -165,46 +165,7 @@ const menus = [
     ),
     text: "Liên hệ",
   },
-  {
-    image: (
-      <Svg width="20" height="20" viewBox="0 0 20 20">
-        <Defs>
-          <ClipPath id="clip-path">
-            <Rect
-              id="Rectangle_777"
-              data-name="Rectangle 777"
-              width="20"
-              height="20"
-              transform="translate(48 700)"
-              fill="#023047"
-            />
-          </ClipPath>
-        </Defs>
-        <G
-          id="Mask_Group_272"
-          data-name="Mask Group 272"
-          transform="translate(-48 -700)"
-          clipPath="url(#clip-path)"
-        >
-          <G
-            id="newspaper_2_"
-            data-name="newspaper (2)"
-            transform="translate(48 700)"
-          >
-            <G id="Group_792" data-name="Group 792">
-              <Path
-                id="Path_1578"
-                data-name="Path 1578"
-                d="M19.286,5H15.714V.714A.714.714,0,0,0,15,0H.714A.714.714,0,0,0,0,.714V17.143A2.857,2.857,0,0,0,2.857,20H17.143A2.857,2.857,0,0,0,20,17.143V5.714A.714.714,0,0,0,19.286,5ZM5.714,3.571H10A.714.714,0,0,1,10,5H5.714a.714.714,0,1,1,0-1.429Zm6.429,13.571H3.571a.714.714,0,1,1,0-1.429h8.571a.714.714,0,1,1,0,1.429Zm0-2.857H3.571a.714.714,0,1,1,0-1.429h8.571a.714.714,0,1,1,0,1.429Zm0-2.857H3.571a.714.714,0,0,1,0-1.429h8.571a.714.714,0,1,1,0,1.429Zm0-2.857H3.571a.714.714,0,0,1,0-1.429h8.571a.714.714,0,1,1,0,1.429Zm6.429,8.571a1.429,1.429,0,1,1-2.857,0V6.429h2.857V17.143Z"
-                fill="#023047"
-              />
-            </G>
-          </G>
-        </G>
-      </Svg>
-    ),
-    text: "Chính sách\nbảo mật",
-  },
+
 ];
 
 const FooterBlock = () => {
@@ -241,7 +202,8 @@ const FooterBlock = () => {
 const styles = StyleSheet.create({
   footer: {
     flex: 1,
-    justifyContent: "flex-end",
+    justifyContent:"center",
+    alignItems:'center'
   },
   flatlist: {
     flexGrow: 0,

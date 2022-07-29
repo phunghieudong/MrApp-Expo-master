@@ -393,6 +393,22 @@ const NormalScheduleScreen: FC<NormalScheduleProps> = ({
                   <Text style={styles.tabTitle}>Tái khám</Text>
                 </View>
               </TouchableWithoutFeedback>
+
+              
+              <TouchableWithoutFeedback onPress={() => setStatus(0)}>
+                <View style={[styles.rowCenter, { paddingLeft: 30 }]}>
+                  {status === 0 ? (
+                    <View style={styles.rotate45}>
+                      <View style={styles.blueOfCircle}></View>
+                      <View style={styles.orangeOfCircle}></View>
+                    </View>
+                  ) : (
+                    <View style={styles.normalCircle} />
+                  )}
+
+                  <Text style={styles.tabTitle}>Dịch vụ </Text>
+                </View>
+              </TouchableWithoutFeedback>
             </View>
             <Form style={styles.frmcontrol}>
               <Select
@@ -429,18 +445,29 @@ const NormalScheduleScreen: FC<NormalScheduleProps> = ({
                   selected={value?.vaccineTypeName || ""}
                 />
               )}
-              <Select
-                nav={next >= 3 ? navCalendar : undefined}
-                placeholder="CHỌN NGÀY KHÁM"
-                next={next >= 3 ? true : false}
-                selected={_format.getShortVNDate(value?.examinationDate) || ""}
-              />
-              <Select
-                nav={next >= 4 ? navTimePicker : undefined}
-                placeholder="CHỌN GIỜ KHÁM"
-                next={next >= 4 ? true : false}
-                selected={value?.examinationScheduleDetailName || ""}
-              />
+
+                {status > 0 &&
+                (value.isBHYTService === undefined ||
+                  value.isBHYTService === true) && (
+                  <View>
+                    <Select
+                    nav={next >= 3 ? navCalendar : undefined}
+                    placeholder="CHỌN NGÀY KHÁM"
+                    next={next >= 3 ? true : false}
+                    selected={_format.getShortVNDate(value?.examinationDate) || ""}
+                  />
+                  <Select
+                    nav={next >= 4 ? navTimePicker : undefined}
+                    placeholder="CHỌN GIỜ KHÁM"
+                    next={next >= 4 ? true : false}
+                    selected={value?.examinationScheduleDetailName || ""}
+                  />
+              
+                    </View>
+                   
+
+                  )}
+          
               {status === 1 &&
                 (value.isBHYTService === undefined ||
                   value.isBHYTService === true) && (
@@ -790,6 +817,7 @@ const styles = StyleSheet.create({
     height: 50,
     flexDirection: "row",
     alignItems: "center",
+    justifyContent:'center'
   },
   service: {
     flexDirection: "row",

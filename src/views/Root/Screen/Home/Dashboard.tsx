@@ -122,12 +122,12 @@ const DashboardScreen = (props: DashboardProps) => {
                   style={[
                     styles.menuimgbox,
                     {
-                      backgroundColor: "#FB8500",
+                      backgroundColor: "#FFDA44",
                     },
                   ]}
                 >
                   <ExaminationCalendarIcon />
-                  <View style={[styles.badge, { backgroundColor: "#FB8500" }]}>
+                  <View style={[styles.badge, { backgroundColor: "#FFDA44" }]}>
                     <Text style={styles.badgetext}>4</Text>
                   </View>
                 </View>
@@ -146,7 +146,7 @@ const DashboardScreen = (props: DashboardProps) => {
                 activeOpacity={0.9}
               >
                 <View
-                  style={[styles.menuimgbox, { backgroundColor: "#FFB703" }]}
+                  style={[styles.menuimgbox, { backgroundColor: "#FFDA44" }]}
                 >
                   <ScheduleIcon />
                 </View>
@@ -174,7 +174,7 @@ const DashboardScreen = (props: DashboardProps) => {
                 activeOpacity={0.9}
               >
                 <View
-                  style={[styles.menuimgbox, { backgroundColor: "#142977" }]}
+                  style={[styles.menuimgbox, { backgroundColor: "#FFDA44" }]}
                 >
                   <MedicalRecordIcon />
                 </View>
@@ -195,7 +195,7 @@ const DashboardScreen = (props: DashboardProps) => {
                 activeOpacity={0.9}
               >
                 <View
-                  style={[styles.menuimgbox, { backgroundColor: "#219EBC" }]}
+                  style={[styles.menuimgbox, { backgroundColor: "#FFDA44" }]}
                 >
                   {(!user.BirthDate ||
                     _format.getAge(new Date(user.BirthDate))) < 12 && (
